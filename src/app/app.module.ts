@@ -8,9 +8,12 @@ import { CardComponent } from './card/card.component';
 // import {FormsModule} from '@angular/forms';
 import {firebase, firebaseui, FirebaseUIModule} from 'firebaseui-angular';
 import {environment} from '../environments/environment';
-// import {AppRoutingModule} from './app-routing.module';
+import {AppRoutingModule} from './app-routing.module';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFireAuthModule, USE_EMULATOR as USE_AUTH_EMULATOR} from '@angular/fire/auth';
+import { LoginComponent } from './login/login.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 const firebaseUiAuthConfig: firebaseui.auth.Config = {
   signInFlow: 'popup',
@@ -48,10 +51,14 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
     HeaderComponent,
     CarouselBannerComponent,
     FeedComponent,
-    CardComponent
+    CardComponent,
+    LoginComponent,
+    LoginPageComponent,
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     FirebaseUIModule.forRoot(firebaseUiAuthConfig)

@@ -1,3 +1,7 @@
+https://github.com/RaphaelJenni/FirebaseUI-Angular/blob/master/src/app/app.module.ts
+https://github.com/angular/angularfire/blob/master/sample/src/environments/environment.ts
+https://github.com/firebase/firebaseui-web#angular-setup
+
 # Mabook
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
