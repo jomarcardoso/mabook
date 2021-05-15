@@ -1,0 +1,19 @@
+@import '../../styles/utilities/utilities';
+
+.carousel-banner {
+  &__picture {
+    display: block;
+    padding-bottom: calc(100% / 3 * 2);
+  }
+
+  &__img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  @include media-breakpoint-up(md) {
+    &__picture {
+      padding-bottom: calc(40%);
+    }
+  }
+}
