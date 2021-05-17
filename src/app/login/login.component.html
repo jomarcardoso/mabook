@@ -1,4 +1,9 @@
 <section>
   <h2>Login</h2>
-  <firebase-ui></firebase-ui>
+  <firebase-ui
+    (signInSuccessWithAuthResult)="successCallback($event)"
+    (signInFailure)="errorCallback($event)"
+    (uiShown)="uiShownCallback()"
+  >
+  </firebase-ui>
 </section>
