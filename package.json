@@ -2,7 +2,8 @@
   "name": "mabook",
   "version": "0.0.0",
   "scripts": {
-    "firebase:local": "firebase init emulators",
+    "firebase:init": "firebase init",
+    "firebase:local": "firebase emulators:start",
     "ng": "ng",
     "dev": "ng serve --open",
     "start": "run-p firebase:local dev",
