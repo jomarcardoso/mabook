@@ -1,7 +1,6 @@
 import { Component, OnInit, NgZone } from '@angular/core';
 import { AuthService } from '../shared/services/auth/auth.service';
 import { Router } from '@angular/router';
-import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-account-page',

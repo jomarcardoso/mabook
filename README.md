@@ -2,6 +2,7 @@ https://github.com/angular/angularfire/blob/master/docs/emulators/emulators.md
 https://github.com/RaphaelJenni/FirebaseUI-Angular/blob/master/src/app/app.module.ts
 https://github.com/angular/angularfire/blob/master/sample/src/environments/environment.ts
 https://github.com/firebase/firebaseui-web#angular-setup
+https://www.positronx.io/full-angular-7-firebase-authentication-system/
 
 # Mabook
 

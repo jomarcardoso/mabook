@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
 
   successCallback(data: FirebaseUISignInSuccessWithAuthResult) {
     console.log('successCallback', data);
-    this.router.navigate(['page']);
+    this.router.navigate(['/']);
   }
 
   errorCallback(data: FirebaseUISignInFailure) {
