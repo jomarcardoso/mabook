@@ -17,6 +17,8 @@ import { USE_EMULATOR as USE_FUNCTIONS_EMULATOR } from '@angular/fire/functions'
 import { LoginComponent } from './login/login.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { AuthService } from './shared/services/auth/auth.service';
+import { AccountPageComponent } from './account-page/account-page.component';
 
 const firebaseUiAuthConfig: firebaseui.auth.Config = {
   signInFlow: 'popup',
@@ -58,6 +60,7 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
     LoginComponent,
     LoginPageComponent,
     HomePageComponent,
+    AccountPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,6 +70,7 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
     FirebaseUIModule.forRoot(firebaseUiAuthConfig)
   ],
   providers: [
+    AuthService,
     { provide: USE_AUTH_EMULATOR, useValue: !environment.production ? ['localhost', 9099] : undefined },
     { provide: USE_DATABASE_EMULATOR, useValue: !environment.production ? ['localhost', 9000] : undefined },
     { provide: USE_FIRESTORE_EMULATOR, useValue: !environment.production ? ['localhost', 8081] : undefined },
