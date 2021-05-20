@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 interface Slide {
-  src: string;
+  mobileUrl: string;
+  deskUrl: string;
   alt: string;
   active: boolean;
   title: string;
@@ -14,15 +16,13 @@ interface Slide {
   styleUrls: ['./carousel-banner.component.scss']
 })
 export class CarouselBannerComponent implements OnInit {
-  slides: Slide[] = [{
-    active: false,
-    alt: 'b',
-    src: 'a',
-    description: 'descrição do slide',
-    title: 'Título do slide',
-  }];
+  private slideCollection: AngularFirestoreCollection<Slide>;
+  slides: Observable<Slide[]>;
 
-  constructor() { }
+  constructor(afs: AngularFirestore) {
+    this.slideCollection = afs.collection<Slide>('banner');
+    this.slides = this.slideCollection.valueChanges();
+  }
 
   ngOnInit(): void {
   }

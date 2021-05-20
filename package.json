@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "firebase:init": "firebase init",
-    "firebase:local": "firebase emulators:start",
+    "firebase:local": "firebase emulators:start --import=./firebase --export-on-exit",
+    "firebase:export": "firebase emulators:export ./firebase",
     "ng": "ng",
     "dev": "ng serve --open",
     "start": "run-p firebase:local dev",
@@ -26,6 +27,7 @@
     "@angular/router": "~11.2.13",
     "@types/bootstrap": "^5.0.13",
     "bootstrap": "^5.0.0",
+    "bootstrap-icons": "^1.5.0",
     "firebase": "^8.6.1",
     "firebaseui": "^4.8.0",
     "firebaseui-angular": "^5.1.2",

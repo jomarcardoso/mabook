@@ -1,60 +1,60 @@
-[debug] [2021-05-18T22:58:15.584Z] ----------------------------------------------------------------------
-[debug] [2021-05-18T22:58:15.586Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
-[debug] [2021-05-18T22:58:15.587Z] CLI Version:   9.10.2
-[debug] [2021-05-18T22:58:15.587Z] Platform:      win32
-[debug] [2021-05-18T22:58:15.587Z] Node Version:  v10.24.0
-[debug] [2021-05-18T22:58:15.601Z] Time:          Tue May 18 2021 19:58:15 GMT-0300 (GMT-03:00)
-[debug] [2021-05-18T22:58:15.601Z] ----------------------------------------------------------------------
+[debug] [2021-05-20T02:59:17.259Z] ----------------------------------------------------------------------
+[debug] [2021-05-20T02:59:17.261Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --import=./firebase
+[debug] [2021-05-20T02:59:17.262Z] CLI Version:   9.10.2
+[debug] [2021-05-20T02:59:17.262Z] Platform:      win32
+[debug] [2021-05-20T02:59:17.262Z] Node Version:  v10.24.0
+[debug] [2021-05-20T02:59:17.263Z] Time:          Wed May 19 2021 23:59:17 GMT-0300 (GMT-03:00)
+[debug] [2021-05-20T02:59:17.263Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2021-05-18T22:58:15.612Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
-[debug] [2021-05-18T22:58:15.993Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2021-05-18T22:58:15.994Z] > authorizing via signed-in user (antonionetocardoso@gmail.com)
+[debug] [2021-05-20T02:59:17.274Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-05-20T02:59:17.274Z] > authorizing via signed-in user (antonionetocardoso@gmail.com)
 [info] i  emulators: Starting emulators: auth, functions, firestore, database {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, database"}}
-[debug] [2021-05-18T22:58:16.557Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
-[debug] [2021-05-18T22:58:16.557Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
-[debug] [2021-05-18T22:58:18.075Z] [hub] writing locator at C:\Users\JOMAR~1.CAR\AppData\Local\Temp\hub-mabook-d8a92.json
+[debug] [2021-05-20T02:59:19.328Z] [hub] writing locator at C:\Users\JOMAR~1.CAR\AppData\Local\Temp\hub-mabook-d8a92.json
 [warn] !  functions: The functions emulator is configured but there is no functions source directory. Have you run firebase init functions? {"metadata":{"emulator":{"name":"functions"},"message":"The functions emulator is configured but there is no functions source directory. Have you run \u001b[1mfirebase init functions\u001b[22m?"}}
+[info] i  firestore: Importing data from C:\Users\jomar.cardoso\Documents\projetos-pessoais\mabook\firebase\firestore_export\firestore_export.overall_export_metadata {"metadata":{"emulator":{"name":"firestore"},"message":"Importing data from C:\\Users\\jomar.cardoso\\Documents\\projetos-pessoais\\mabook\\firebase\\firestore_export\\firestore_export.overall_export_metadata"}}
 [warn] !  firestore: Did not find a Cloud Firestore rules file specified in a firebase.json config file. {"metadata":{"emulator":{"name":"firestore"},"message":"Did not find a Cloud Firestore rules file specified in a firebase.json config file."}}
 [warn] !  firestore: The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration. {"metadata":{"emulator":{"name":"firestore"},"message":"The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration."}}
-[debug] [2021-05-18T22:58:20.169Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: projectId"}}
-[debug] [2021-05-18T22:58:20.170Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2021-05-18T22:58:20.170Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\jomar.cardoso\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.11.15.jar","--host","localhost","--port",8082],"optionalArgs":["port","webchannel_port","host","rules","functions_emulator","seed_from_export"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\jomar.cardoso\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.11.15.jar\",\"--host\",\"localhost\",\"--port\",8082],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"functions_emulator\",\"seed_from_export\"],\"joinArgs\":false}"}}
+[debug] [2021-05-20T02:59:21.392Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2021-05-20T02:59:21.392Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2021-05-20T02:59:21.392Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\jomar.cardoso\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.11.15.jar","--host","localhost","--port",8082,"--seed_from_export","C:\\Users\\jomar.cardoso\\Documents\\projetos-pessoais\\mabook\\firebase\\firestore_export\\firestore_export.overall_export_metadata"],"optionalArgs":["port","webchannel_port","host","rules","functions_emulator","seed_from_export"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\jomar.cardoso\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.11.15.jar\",\"--host\",\"localhost\",\"--port\",8082,\"--seed_from_export\",\"C:\\\\Users\\\\jomar.cardoso\\\\Documents\\\\projetos-pessoais\\\\mabook\\\\firebase\\\\firestore_export\\\\firestore_export.overall_export_metadata\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"functions_emulator\",\"seed_from_export\"],\"joinArgs\":false}"}}
 [info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
-[debug] [2021-05-18T22:58:23.138Z] May 18, 2021 7:58:23 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
-INFO: Started WebSocket server on ws://localhost:50039
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 18, 2021 7:58:23 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\r\nINFO: Started WebSocket server on ws://localhost:50039\r\n"}}
-[debug] [2021-05-18T22:58:23.188Z] API endpoint: http://localhost:8082 {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://localhost:8082"}}
-[debug] [2021-05-18T22:58:23.188Z] 
+[debug] [2021-05-20T02:59:24.403Z] May 19, 2021 11:59:24 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+INFO: Started WebSocket server on ws://localhost:53105
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 19, 2021 11:59:24 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\r\nINFO: Started WebSocket server on ws://localhost:53105\r\n"}}
+[debug] [2021-05-20T02:59:24.443Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
+[debug] [2021-05-20T02:59:24.444Z] localhost:8082
 If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
 
    export FIRESTORE_EMULATOR_HOST=localhost:8082
 
 Dev App Server is now running.
 
- {"metadata":{"emulator":{"name":"firestore"},"message":"\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\r\n\n   export FIRESTORE_EMULATOR_HOST=localhost:8082\n\nDev App Server is now running.\n\r\n"}}
-[debug] [2021-05-18T22:58:25.517Z] > refreshing access token with scopes: []
-[debug] [2021-05-18T22:58:25.518Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ {"metadata":{"emulator":{"name":"firestore"},"message":"localhost:8082\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\r\n\n   export FIRESTORE_EMULATOR_HOST=localhost:8082\n\nDev App Server is now running.\n\r\n"}}
+[debug] [2021-05-20T02:59:26.729Z] > refreshing access token with scopes: []
+[debug] [2021-05-20T02:59:26.730Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
  <request body omitted>
-[debug] [2021-05-18T22:58:25.825Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Tue, 18 May 2021 22:52:57 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
-[debug] [2021-05-18T22:58:25.848Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mabook-d8a92 [none]
-[debug] [2021-05-18T22:58:26.361Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mabook-d8a92 200
-[debug] [2021-05-18T22:58:26.362Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mabook-d8a92 {"projectId":"mabook-d8a92","projectNumber":"521851974766","displayName":"Mabook","name":"projects/mabook-d8a92","resources":{"hostingSite":"mabook-d8a92"},"state":"ACTIVE"}
-[debug] [2021-05-18T22:58:26.362Z] database rules config:  []
+[debug] [2021-05-20T02:59:27.002Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Thu, 20 May 2021 02:53:57 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-20T02:59:27.036Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mabook-d8a92 [none]
+[debug] [2021-05-20T02:59:28.233Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mabook-d8a92 200
+[debug] [2021-05-20T02:59:28.234Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mabook-d8a92 {"projectId":"mabook-d8a92","projectNumber":"521851974766","displayName":"Mabook","name":"projects/mabook-d8a92","resources":{"hostingSite":"mabook-d8a92","storageBucket":"mabook-d8a92.appspot.com","locationId":"southamerica-east1"},"state":"ACTIVE"}
+[debug] [2021-05-20T02:59:28.234Z] database rules config:  []
 [warn] !  database: Did not find a Realtime Database rules file specified in a firebase.json config file. The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration. {"metadata":{"emulator":{"name":"database"},"message":"Did not find a Realtime Database rules file specified in a firebase.json config file. The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration."}}
-[debug] [2021-05-18T22:58:26.364Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
-[debug] [2021-05-18T22:58:26.364Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2021-05-18T22:58:26.364Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
-[debug] [2021-05-18T22:58:26.364Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","C:\\Users\\jomar.cardoso\\.cache\\firebase\\emulators\\firebase-database-emulator-v4.7.2.jar","--host","localhost","--port",9000],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host"],"joinArgs":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\jomar.cardoso\\\\.cache\\\\firebase\\\\emulators\\\\firebase-database-emulator-v4.7.2.jar\",\"--host\",\"localhost\",\"--port\",9000],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\"],\"joinArgs\":false}"}}
+[debug] [2021-05-20T02:59:28.236Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2021-05-20T02:59:28.236Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2021-05-20T02:59:28.236Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
+[debug] [2021-05-20T02:59:28.236Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","C:\\Users\\jomar.cardoso\\.cache\\firebase\\emulators\\firebase-database-emulator-v4.7.2.jar","--host","localhost","--port",9000],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host"],"joinArgs":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\jomar.cardoso\\\\.cache\\\\firebase\\\\emulators\\\\firebase-database-emulator-v4.7.2.jar\",\"--host\",\"localhost\",\"--port\",9000],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\"],\"joinArgs\":false}"}}
 [info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
-[debug] [2021-05-18T22:58:28.794Z] 19:58:28.793 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
- {"metadata":{"emulator":{"name":"database"},"message":"19:58:28.793 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started\r\n"}}
-[debug] [2021-05-18T22:58:29.037Z] 19:58:29.036 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000
- {"metadata":{"emulator":{"name":"database"},"message":"19:58:29.036 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000\r\n"}}
-[debug] [2021-05-18T22:58:38.269Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2021-05-18T22:58:38.269Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2021-05-18T22:58:38.270Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\jomar.cardoso\\.cache\\firebase\\emulators\\ui-v1.4.2\\server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\jomar.cardoso\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.4.2\\\\server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[debug] [2021-05-20T02:59:31.015Z] 23:59:31.012 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+ {"metadata":{"emulator":{"name":"database"},"message":"23:59:31.012 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started\r\n"}}
+[debug] [2021-05-20T02:59:31.245Z] 23:59:31.245 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000
+ {"metadata":{"emulator":{"name":"database"},"message":"23:59:31.245 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000\r\n"}}
+[info] i  auth: Importing config from C:\Users\jomar.cardoso\Documents\projetos-pessoais\mabook\firebase\auth_export\config.json {"metadata":{"emulator":{"name":"database"},"message":"Importing config from C:\\Users\\jomar.cardoso\\Documents\\projetos-pessoais\\mabook\\firebase\\auth_export\\config.json"}}
+[info] i  auth: Importing accounts from C:\Users\jomar.cardoso\Documents\projetos-pessoais\mabook\firebase\auth_export\accounts.json {"metadata":{"emulator":{"name":"database"},"message":"Importing accounts from C:\\Users\\jomar.cardoso\\Documents\\projetos-pessoais\\mabook\\firebase\\auth_export\\accounts.json"}}
+[debug] [2021-05-20T02:59:43.076Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2021-05-20T02:59:43.077Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2021-05-20T02:59:43.077Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\jomar.cardoso\\.cache\\firebase\\emulators\\ui-v1.4.2\\server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\jomar.cardoso\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.4.2\\\\server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
 [info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
-[debug] [2021-05-18T22:58:38.543Z] Web / API server started at http://localhost:4000
+[debug] [2021-05-20T02:59:43.408Z] Web / API server started at http://localhost:4000
  {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at http://localhost:4000\n"}}
 [info] 
 ┌─────────────────────────────────────────────────────────────┐
