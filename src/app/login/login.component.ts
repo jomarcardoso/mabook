@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.afAuth.authState.subscribe(d => console.log(d));
+    this.afAuth.authState.subscribe();
   }
 
   logout() {
@@ -26,7 +26,6 @@ export class LoginComponent implements OnInit {
   }
 
   successCallback(data: FirebaseUISignInSuccessWithAuthResult) {
-    console.log('successCallback', data);
     this.router.navigate(['/']);
   }
 
@@ -35,6 +34,5 @@ export class LoginComponent implements OnInit {
   }
 
   uiShownCallback() {
-    console.log('UI shown');
   }
 }

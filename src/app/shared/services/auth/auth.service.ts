@@ -23,8 +23,6 @@ export class AuthService {
     /* Saving user data in localstorage when
     logged in and setting up null when logged out */
     this.afAuth.authState.subscribe(user => {
-      console.log('user-data', user);
-
       if (user) {
         this.userData = user;
         localStorage.setItem('user', JSON.stringify(this.userData));
@@ -34,8 +32,6 @@ export class AuthService {
         JSON.parse(localStorage.getItem('user'));
       }
     });
-
-    console.log('passou no construtor');
   }
 
   // Sign in with email/password
