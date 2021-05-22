@@ -5,8 +5,8 @@ export interface Img {
 
 export interface Post {
   title: string;
-  img: Img;
-  description: string;
+  imageUrl: Img;
+  content: string;
   date: Date;
   categories: string[];
 }

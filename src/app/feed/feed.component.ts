@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Post } from '../../types';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-feed',
@@ -7,19 +9,14 @@ import { Post } from '../../types';
   styleUrls: ['./feed.component.css']
 })
 export class FeedComponent implements OnInit {
-  title = 'Notícias';
-  posts: Post[] = [{
-    title: 'Professora minerva lança seu primeiro livro ensinando como estudar idiomas sem sair de casa',
-    img: {
-      alt: '',
-      src: '',
-    },
-    categories: [],
-    date: new Date(),
-    description: '',
-  }];
+  private postCollection: AngularFirestoreCollection<Post>;
+  posts: Observable<Post[]>;
+  title = 'Novidades da semana';
 
-  constructor() { }
+  constructor(afs: AngularFirestore) {
+    this.postCollection = afs.collection<Post>('news');
+    this.posts = this.postCollection.valueChanges();
+  }
 
   ngOnInit(): void {
   }

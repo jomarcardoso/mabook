@@ -22,8 +22,6 @@ export class CarouselBannerComponent implements OnInit {
   constructor(afs: AngularFirestore) {
     this.slideCollection = afs.collection<Slide>('banner');
     this.slides = this.slideCollection.valueChanges();
-
-    console.log(this.slideCollection);
   }
 
   ngOnInit(): void {
