@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { AuthService } from '../shared/services/auth/auth.service';
 import { Post } from '../../types';
 
 @Component({
@@ -9,9 +10,9 @@ import { Post } from '../../types';
 export class CardComponent implements OnInit {
   @Input() post: Post;
 
-  // constructor(card: Post) {
-  //   this.card = card;
-  // }
+  constructor(
+    public authService: AuthService,
+  ) {}
 
   ngOnInit(): void {
   }

@@ -1,4 +1,7 @@
 <div class="card" style="width: 18rem;">
+  <div *ngIf="authService.isLoggedIn">
+    stars
+  </div>
   <img src={{post.imageUrl}} class="card-img-top">
   <div class="card-body">
     <h5 class="card-title">{{post.title}}</h5>
