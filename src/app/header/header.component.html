@@ -22,8 +22,10 @@
         </li>
       </ul>
       <form class="d-flex me-auto ms-auto">
-        <input class="form-control me-2" type="search" placeholder="livro, autor, gênero" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i><span class="d-none">procurar</span></button>
+        <div class="input-group">
+          <input class="form-control" type="search" placeholder="livro, autor, gênero" aria-label="buscar">
+          <button class="btn btn-primary" type="submit"><i class="bi bi-search" aria-label="enviar busca"></i></button>
+        </div>
       </form>
       <a *ngIf="!authService.userData" href="#" [routerLink]="['/login']" class="d-flex align-items-center text-decoration-none" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
         <strong class="me-2">{{'login'}}</strong>

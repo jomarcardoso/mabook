@@ -19,6 +19,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AuthService } from './shared/services/auth/auth.service';
 import { AccountPageComponent } from './account-page/account-page.component';
+import { FooterComponent } from './footer/footer.component';
 
 const firebaseUiAuthConfig: firebaseui.auth.Config = {
   signInFlow: 'popup',
@@ -61,6 +62,7 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
     LoginPageComponent,
     HomePageComponent,
     AccountPageComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
