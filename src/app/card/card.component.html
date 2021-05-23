@@ -1,9 +1,8 @@
-<div class="card" style="width: 18rem;">
-  <div *ngIf="authService.isLoggedIn">
-    stars
-  </div>
+<article class="card" style="width: 18rem;">
   <img src={{post.imageUrl}} class="card-img-top">
   <div class="card-body">
+    <app-star-rating class="mb-1" *ngIf="authService.isLoggedIn" [stars]="post.stars">
+    </app-star-rating>
     <h5 class="card-title">{{post.title}}</h5>
   </div>
-</div>
+</article>
