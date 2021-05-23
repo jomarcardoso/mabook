@@ -17,6 +17,15 @@
             <p>{{slide.description}}</p>
           </div>
         </div>
+        <div class="carousel-item active" *ngIf="authService.isLoggedIn">
+          <div class="carousel-banner__picture position-relative">
+            <div class="carousel-caption d-none d-md-block">
+              <a href="#" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <h5 class="text-dark">adicionar banner</h5>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -29,3 +38,6 @@
     </div>
   </div>
 </section>
+<app-modal [title]="'Cadastrar novo banner'">
+  <app-banner-form></app-banner-form>
+</app-modal>
