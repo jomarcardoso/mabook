@@ -1,47 +1,73 @@
-<nav class="navbar navbar-expand-lg navbar-light border-bottom">
-  <div class="container-xxl">
-    <a class="navbar-brand" href="#" [routerLink]="['/']">{{ title }}</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Autores</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Melhores livros
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Todos os gêneros</a></li>
-            <li><hr class="dropdown-divider"></li>
+<nav class="">
+  <div class="navbar navbar-expand-lg navbar-light border-bottom">
+    <div class="container-xxl">
+      <a class="navbar-brand" href="#" [routerLink]="['/']">{{ title }}</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Autores</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Melhores livros
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Todos os gêneros</a></li>
+              <li><hr class="dropdown-divider"></li>
 
-            <li><a *ngFor="let gender of genders" class="dropdown-item" href="#">{{ gender }}</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="d-flex me-auto ms-auto">
-        <div class="input-group">
-          <input class="form-control" type="search" placeholder="livro, autor, gênero" aria-label="buscar">
-          <button class="btn btn-primary" type="submit"><i class="bi bi-search" aria-label="enviar busca"></i></button>
+              <li><a *ngFor="let gender of genders" class="dropdown-item" href="#">{{ gender }}</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="me-auto ms-auto d-none d-lg-block">
+          <app-search></app-search>
         </div>
-      </form>
-      <a *ngIf="!authService.userData" href="#" [routerLink]="['/login']" class="d-flex align-items-center text-decoration-none" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-        <strong class="me-2">{{'login'}}</strong>
-        <img src="{{'/assets/imgs/dummy-user.png'}}" alt="" width="32" height="32" class="rounded-circle me-2">
-      </a>
-      <div class="dropdown" *ngIf="authService.userData as user">
-        <a href="#" class="d-flex align-items-center text-decoration-none" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-          <strong class="dropdown-toggle me-2">{{(user.displayName) ? user.displayName : 'User'}}</strong>
-          <img src="{{(user.photoURL) ? user.photoURL : '/assets/imgs/dummy-user.png'}}" alt="" width="32" height="32" class="rounded-circle me-2">
+        <a *ngIf="!authService.isLoggedIn" href="#" [routerLink]="['/login']" class="d-flex align-items-center text-decoration-none" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+          <strong class="me-2">{{'login'}}</strong>
+          <img src="{{'/assets/imgs/dummy-user.png'}}" alt="" width="32" height="32" class="rounded-circle me-2">
         </a>
-        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-          <li><a class="dropdown-item" href="#" [routerLink]="['/account']">Minha conta</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#" (click)="authService.SignOut()">Sair</a></li>
+        <div class="d-none d-lg-block">
+          <div class="dropdown" *ngIf="authService.userData as user">
+            <a href="#" class="d-flex align-items-center text-decoration-none" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+              <strong class="dropdown-toggle me-2">{{(user.displayName) ? user.displayName : 'User'}}</strong>
+              <img src="{{(user.photoURL) ? user.photoURL : '/assets/imgs/dummy-user.png'}}" alt="" width="32" height="32" class="rounded-circle me-2">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+              <li><a class="dropdown-item" href="#" [routerLink]="['/account']">Minha conta</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#" (click)="authService.SignOut()">Sair</a></li>
+            </ul>
+          </div>
+        </div>
+        <ul class="d-block d-lg-none navbar-nav" *ngIf="authService.userData as user">
+          <li class="nav-item"><hr class="divider"></li>
+          <li class="nav-item d-flex justify-content-between">
+            <a class="nav-link" href="#" [routerLink]="['/account']">
+              <div class="d-flex align-items-center text-decoration-none me-2">
+                <img src="{{(user.photoURL) ? user.photoURL : '/assets/imgs/dummy-user.png'}}" alt="" width="24" height="24" class="rounded-circle me-2">
+                <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong>
+              </div>
+            </a>
+            <a class="nav-link" href="#" (click)="authService.SignOut()">Sair</a>
+          </li>
         </ul>
       </div>
+    </div>
+  </div>
+  <div class="d-lg-none border-bottom py-2 shadow-sm">
+    <div class="container-xxl">
+      <app-search></app-search>
     </div>
   </div>
 </nav>

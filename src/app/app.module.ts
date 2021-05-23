@@ -21,6 +21,7 @@ import { AuthService } from './shared/services/auth/auth.service';
 import { AccountPageComponent } from './account-page/account-page.component';
 import { FooterComponent } from './footer/footer.component';
 import { StarRatingComponent } from './star-rating/star-rating.component';
+import { SearchComponent } from './search/search.component';
 
 const firebaseUiAuthConfig: firebaseui.auth.Config = {
   signInFlow: 'popup',
@@ -65,6 +66,7 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
     AccountPageComponent,
     FooterComponent,
     StarRatingComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,

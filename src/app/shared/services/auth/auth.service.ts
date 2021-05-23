@@ -92,7 +92,9 @@ export class AuthService {
   // Returns true when user is looged in and email is verified
   get isLoggedIn(): boolean {
     const user = AuthService.getSavedUser();
-    return (user !== null && user.emailVerified !== false) ? true : false;
+
+    return Boolean(user || this.userData);
+    // return (user !== null && user.emailVerified !== false) ? true : false;
   }
 
   // Sign in with Google
@@ -136,6 +138,7 @@ export class AuthService {
   SignOut() {
     return this.afAuth.signOut().then(() => {
       localStorage.removeItem('user');
+      this.userData = null;
       this.router.navigate(['sign-in']);
     })
   }
