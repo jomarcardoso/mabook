@@ -2,14 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { AuthService } from '../shared/services/auth/auth.service';
-interface Slide {
-  mobileUrl: string;
-  deskUrl: string;
-  alt: string;
-  active: boolean;
-  title: string;
-  description: string;
-}
+import { Banner } from '../shared/services/banner/banner.constants';
 
 @Component({
   selector: 'app-carousel-banner',
@@ -17,12 +10,12 @@ interface Slide {
   styleUrls: ['./carousel-banner.component.scss']
 })
 export class CarouselBannerComponent implements OnInit {
-  private slideCollection: AngularFirestoreCollection<Slide>;
-  slides: Observable<Slide[]>;
+  private slideCollection: AngularFirestoreCollection<Banner>;
+  slides: Observable<Banner[]>;
   openedCreateModal = false;
 
   constructor(afs: AngularFirestore, public authService: AuthService) {
-    this.slideCollection = afs.collection<Slide>('banner');
+    this.slideCollection = afs.collection<Banner>('banner');
     this.slides = this.slideCollection.valueChanges();
   }
 

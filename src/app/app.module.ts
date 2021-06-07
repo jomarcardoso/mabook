@@ -5,7 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import { CarouselBannerComponent } from './carousel-banner/carousel-banner.component';
 import { FeedComponent } from './feed/feed.component';
 import { CardComponent } from './card/card.component';
-// import {FormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {firebase, firebaseui, FirebaseUIModule} from 'firebaseui-angular';
 import {environment} from '../environments/environment';
 import {AppRoutingModule} from './app-routing.module';
@@ -77,7 +77,9 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    FirebaseUIModule.forRoot(firebaseUiAuthConfig)
+    FirebaseUIModule.forRoot(firebaseUiAuthConfig),
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     AuthService,

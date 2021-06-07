@@ -1,22 +1,25 @@
-<form action="">
-  <div class="mb 3">
-    <label for="" class="form-label">Título</label>
-    <input type="text" class="form-control">
-  </div>
-  <div class="mb 3">
-    <label for="" class="form-label">Descrição</label>
-    <input type="text" class="form-control">
-  </div>
-  <div class="mb 3">
-    <label for="" class="form-label">Imagem para computador</label>
-    <input type="text" class="form-control">
-  </div>
-  <div class="mb 3">
-    <label for="" class="form-label">Imagem para celular</label>
-    <input type="text" class="form-control">
-  </div>
-  <div class="mb 3">
-    <label for="" class="form-label">Texto alternativo</label>
-    <input type="text" class="form-control">
-  </div>
+<form [formGroup]="bannerForm" (ngSubmit)="onSubmit()">
+  <app-modal [title]="'Cadastrar novo banner'">
+
+    <div class="mb 3">
+      <label for="" class="form-label">Título</label>
+      <input type="text" class="form-control" formControlName="title">
+    </div>
+    <div class="mb 3">
+      <label for="" class="form-label">Descrição</label>
+      <input type="text" class="form-control" formControlName="description">
+    </div>
+    <div class="mb 3">
+      <label for="" class="form-label">Imagem para computador</label>
+      <input type="text" class="form-control" formControlName="deskUrl">
+    </div>
+    <div class="mb 3">
+      <label for="" class="form-label">Imagem para celular</label>
+      <input type="text" class="form-control" formControlName="mobileUrl">
+    </div>
+    <div class="mb 3">
+      <label for="" class="form-label">Texto alternativo</label>
+      <input type="text" class="form-control" formControlName="alt">
+    </div>
+  </app-modal>
 </form>
