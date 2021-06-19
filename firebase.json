@@ -1,4 +1,14 @@
 {
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "storage": {
+    "rules": "storage.rules"
+  },
   "emulators": {
     "auth": {
       "port": 9099
@@ -7,14 +17,16 @@
       "port": 5001
     },
     "firestore": {
-      "port": 8082
-    },
-    "ui": {
-      "enabled": true,
-      "port": 4000
+      "port": 8080
     },
     "database": {
       "port": 9000
+    },
+    "storage": {
+      "port": 9199
+    },
+    "ui": {
+      "enabled": true
     }
   }
 }
