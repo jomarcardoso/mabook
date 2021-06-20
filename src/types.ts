@@ -9,6 +9,6 @@ export interface Post {
   content: string;
   date: Date;
   categories: string[];
-  starts: number;
+  stars: number;
   votes: number;
 }
