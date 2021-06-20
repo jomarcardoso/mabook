@@ -6,6 +6,9 @@ import { AuthService } from '../shared/services/auth/auth.service';
  *
  * @example
  * <app-header></app-header>
+ *
+ * @example
+ * <div>oi</div>
  */
 @Component({
   selector: 'app-header',
